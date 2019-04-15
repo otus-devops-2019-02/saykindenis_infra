@@ -1,4 +1,33 @@
 # saykindenis_infra
+
+Homework 6
+
+Create GCP instance with predefined app configuration specified in startup-script.sh
+
+gcloud compute instances create reddit-app2 \
+       --boot-disk-size=10GB \
+       --image-family ubuntu-1604-lts \
+       --image-project=ubuntu-os-cloud \
+       --machine-type=g1-small \
+       --tags puma-server \
+       --restart-on-failure \
+       --metadata startup-script-url=gs://infrabucket/startup-script.sh
+
+Allowing port access on GCP firewall
+
+gcloud compute firewall-rules create puma-server-tcp9292 \
+      --action allow \
+      --target-tags puma-server \
+      --source-ranges 0.0.0.0/0 \
+      --rules tcp:9292
+
+testapp_IP = 35.204.122.47
+testapp_port = 9292
+
+
+Homework 5
+
+
 saykindenis Infra repository
 
 Connect with one command:
