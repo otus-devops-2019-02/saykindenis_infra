@@ -4,7 +4,7 @@ Homework 6
 
 Create GCP instance with predefined app configuration specified in startup-script.sh
 
-gcloud compute instances create reddit-app2 \
+gcloud compute instances create reddit-app3 \
        --boot-disk-size=10GB \
        --image-family ubuntu-1604-lts \
        --image-project=ubuntu-os-cloud \
@@ -21,7 +21,7 @@ gcloud compute firewall-rules create puma-server-tcp9292 \
       --source-ranges 0.0.0.0/0 \
       --rules tcp:9292
 
-testapp_IP = 35.204.122.47
+testapp_IP = 35.204.80.241
 testapp_port = 9292
 
 
