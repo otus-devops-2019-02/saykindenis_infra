@@ -1,0 +1,14 @@
+[Unit]
+Description=RedditAPP
+After=network.target
+Requires=mongod.service
+
+[Service]
+ExecStart=/usr/local/bin/puma
+WorkingDirectory=/home/appuser/reddit
+User=appuser
+Restart=always
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
