@@ -1,9 +1,0 @@
-app:
-  hosts:
-    stage_appserver:
-      ansible_host: 34.77.9.103
-
-db:
-  hosts:
-    stage_dbserver:
-      ansible_host: 35.233.14.245
