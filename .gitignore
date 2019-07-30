@@ -11,3 +11,5 @@ vault.key
 *.log
 *.pyc
 .molecule .cache .pytest_cache
+.env
+.vagrant

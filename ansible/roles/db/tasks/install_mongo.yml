@@ -14,6 +14,7 @@
   apt:
     name: mongodb-org
     state: present
+    force: yes
   tags: install
 
 - name: Configure service supervisor
